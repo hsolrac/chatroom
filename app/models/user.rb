@@ -15,4 +15,8 @@ class User < ApplicationRecord
   after_update if: :password_digest_previously_changed? do
     sessions.where.not(id: Current.session).delete_all
   end
+
+  after_create_commit { broadcast_append_to "users" }
+
+  scope :all_except, -> (user) { User.where.not(id: user)  }
 end

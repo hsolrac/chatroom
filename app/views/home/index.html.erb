@@ -1,16 +1,9 @@
-<p style="color: green"><%= notice %></p>
-
-<span>Signed as <%= Current.user.email %></span>
-
-
-<h2>Access history</h2>
-
 <div>
-  <%= link_to "Devices & Sessions", sessions_path %>
+  <span><%= Current.user.email %></span>
 </div>
-
-
-<%= button_to "New chat", Current.session, method: :delete, class: "inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20" %>
+<div>
+  <%= link_to "Start Chating", rooms_index_path, class: "inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20" %>
+</div>
 
 <br>
 <br>
