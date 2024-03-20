@@ -1,15 +1,15 @@
 # ChatRoom
 
-## 1. Clone the repository:
+#### 1. Clone the repository:
 ```bash
 git clone git@github.com:hsolrac/chatroom.git
 ```
-## 2. Go inside multiwoven folder:
+#### 2. Go inside multiwoven folder:
 ```bash 
 cd chatroom/
 ```
 
-## 3. Start the services:
+#### 3. Start the services:
 
 Make sure you have Docker installed.
 
@@ -17,9 +17,9 @@ Make sure you have Docker installed.
 docker compose up --build
 ```
 
-# If you are not using docker:
+### Whitouth docker:
 
-## Requirements
+### Requirements
 
 - Ruby 3.1
 - Node.js 20
@@ -32,13 +32,13 @@ Make sure you have installed all those dependencies.
 ```bash 
 bundle install
 ```
-## Install javascript dependencies
+#### Install javascript dependencies
 
 ```bash 
 yarn install
 ```
 
-## Database Configuration
+#### Database Configuration
 
 ```bash 
 bin/rails db:create 
@@ -47,7 +47,7 @@ bin/rails db:migrate
 # or using bin/rails db:prepare 
 ```
 
-## Create a user 
+#### Create a user 
 
 Run `bin/rails console`
 
@@ -55,7 +55,7 @@ Run `bin/rails console`
 User.create!(username: "admin", email: "admin@localhost", password: "password", password_confirmation: "password")
 ```
 
-## Start the server
+### Start the server
 
 After you’ve set up everything, now you can running `./bin/dev` and `redis-server` to start all service you need to develop.
 Then visit <http://localhost:3000>
