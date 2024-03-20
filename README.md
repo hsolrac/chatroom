@@ -17,7 +17,7 @@ Make sure you have Docker installed.
 docker compose up --build
 ```
 
-### Whitouth docker:
+## Whitouth docker:
 
 ### Requirements
 
