@@ -4,7 +4,7 @@
 ```bash
 git clone git@github.com:hsolrac/chatroom.git
 ```
-#### 2. Go inside multiwoven folder:
+#### 2. Go inside chatroom folder:
 ```bash 
 cd chatroom/
 ```
