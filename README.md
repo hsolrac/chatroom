@@ -1,4 +1,5 @@
 # ChatRoom
+Another proof of concept with Rails 7 using [Hotwired](hotwired.dev) resources
 
 #### 1. Clone the repository:
 ```bash
@@ -11,7 +12,7 @@ cd chatroom/
 
 #### 3. Start the services:
 
-Make sure you have Docker installed.
+Make sure you have [Docker](docker.com) installed.
 
 ```bash 
 docker compose up --build
