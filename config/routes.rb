@@ -9,7 +9,10 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:index, :show, :destroy]
   resource  :password, only: [:edit, :update]
-  resources  :rooms
+  resources  :rooms do 
+    resource :messages
+  end
+
   get 'users/:id', to: 'users#show', as: :user
   namespace :identity do
     resource :email,              only: [:edit, :update]

@@ -23,7 +23,6 @@ end
 
 group :development do
   gem "web-console"
-  gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
