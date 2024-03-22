@@ -1,19 +1,30 @@
-<div>
+<aside id="logo-sidebar" class="bg-gray-900 fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
   <h5><%= Current.user.email %></h5>
   <h2>Users</h2>
   <hr>
-  <% turbo_stream_from 'users' %>
+  <%= turbo_stream_from 'users' %>
   <div id="users">
     <%= render @users %>
   </div>
   <br>
 
   <h2>Rooms</h2>
-  <% turbo_stream_from 'rooms' %>
+  <%= turbo_stream_from 'rooms' %>
   <div id="rooms">
     <%= render @rooms %>
   </div>
   <hr>
   <br>
   <%= render 'layouts/new_room_form' %>
+</aside>
+
+<div class="w-full">
+  <% if @single_room %>
+    <h4 class="center"><%= @user&.name || @single_room.name %></h4>
+    <%= turbo_stream_from @single_room %>
+    <div id="messages">
+      <%= render @messages %>
+    </div>
+    <%= render 'layouts/new_message_form' %>
+  <% end  %>
 </div>
