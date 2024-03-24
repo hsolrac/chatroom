@@ -61,3 +61,12 @@ User.create!(username: "admin", email: "admin@localhost", password: "password", 
 After you’ve set up everything, now you can running `./bin/dev` and `redis-server` to start all service you need to develop.
 Then visit <http://localhost:3000>
 
+
+#### TODO: 
+
+- [ ] Direct Messages for users 
+- [ ] DropDownMenu (edit users, logout)
+- [ ] Notification messages 
+- [ ] Online users
+- [ ] Delete messages
+
