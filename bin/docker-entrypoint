@@ -1,6 +1,14 @@
 #!/bin/bash -e
 
 # If running the rails server then create or migrate existing database
+pid_file="/app/tmp/pids/server.pid"
+
+# Check if the PID file exists
+if [ -f "$pid_file" ]; then
+    rm "$pid_file"
+    echo "Removed $pid_file"
+fi 
+
 if [ "${1}" == "bin/rails" ] && [ "${2}" == "server" ]; then
   ./bin/rails db:prepare
 fi
