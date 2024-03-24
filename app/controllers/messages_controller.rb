@@ -1,8 +1,8 @@
 class MessagesController < ApplicationController
   def create
-   Room.find(params["room_id"])
+    Room.find(params["room_id"])
       .messages
-      .create!(message_params.merge(user_id: Current.user))
+      .create!(message_params.merge(user_id: Current.user.id))
   end
 
   private 

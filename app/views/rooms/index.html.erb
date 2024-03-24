@@ -20,11 +20,15 @@
 
 <div class="w-full">
   <% if @single_room %>
-    <h4 class="center"><%= @user&.name || @single_room.name %></h4>
-    <%= turbo_stream_from @single_room %>
-    <div id="messages">
+    <div class="flex justify-center">
+      <h4 class="text-3xl font-bold tracking-tight text-gray-900"><%= @user&.name || @single_room.name %></h4>
+    </div>
+    <%= turbo_stream_from 'messages' %>
+    <div id="messages" class="my-0.5">
       <%= render @messages %>
     </div>
-    <%= render 'layouts/new_message_form' %>
+    <div class="form-message">
+      <%= render 'layouts/new_message_form' %>
+    </div>
   <% end  %>
 </div>

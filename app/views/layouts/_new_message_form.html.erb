@@ -1,4 +1,4 @@
-<%= form_with(model: [@single_room, @message], remote: true, class: 'form') do |f| %>
-  <%= f.text_field :body, class: 'form-control', autocomplet: 'off' %>
+<%= form_with(model: [@single_room, @message], remote: true, class: 'flex') do |f| %>
+  <%= f.text_field :body, class: 'w-full', autocomplet: 'off' %>
   <%= f.submit data: {disable_with: false} %>
 <% end %>
