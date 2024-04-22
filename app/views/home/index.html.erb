@@ -1,13 +1,11 @@
 <div>
-  <span><%= Current.user.email %></span>
-
   <br>
   <br>
-  <%= link_to "Start Chating", rooms_index_path, class: "inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20" %>
+  <%= link_to "Rooms/Chats", rooms_index_path, class: "inline-flex items-center rounded-md px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20" %>
   <br>
   <br>
   <br>
 
-<%= button_to "Log out", Current.session, method: :delete %>
+  <%= button_to "Log out", Current.session, method: :delete %>
 
 </div>

@@ -25,4 +25,4 @@ EXPOSE 3000
 # Entrypoint prepares the database.
 ENTRYPOINT ["/app/bin/docker-entrypoint"]
 
-CMD ["bin/rails", "server", "-b", "0.0.0.0"]
+CMD ["bin/dev"]
